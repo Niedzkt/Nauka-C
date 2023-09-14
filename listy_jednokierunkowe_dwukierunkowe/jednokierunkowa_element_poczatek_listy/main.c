@@ -11,6 +11,8 @@ struct sll_node *insert_front(struct sll_node *front, struct sll_node *new_node)
     return new_node;
 }
 
+
+
 int main() {
     struct sll_node* front = NULL;
     front = dodaj_na_poczatek(front, 5);

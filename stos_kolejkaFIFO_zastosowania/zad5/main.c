@@ -16,7 +16,7 @@ struct queue_pointers
 bool enqueue(struct queue_pointers *queue, int data){
     struct queue_node *new_node = (struct queue_node *)
     malloc(sizeof(struct queue_node));
-    if (NULL!=new_node)
+    if (NULL!= new_node)
     {
         new_node->data=data;
         new_node->next=NULL;
@@ -52,14 +52,11 @@ bool dequeue(struct queue_pointers *queue, int *data){
 }
 
 void print_queue(struct queue_pointers queue){
-    for ( ; NULL!=queue.head; queue.head = queue.head->next)
+    for ( ; NULL!= queue.head; queue.head=queue.head->next)
     {
         printf("%d \n", queue.head->data);
     }
-
-    
 }
-
 
 int main(){
     struct queue_pointers queue = {NULL, NULL};

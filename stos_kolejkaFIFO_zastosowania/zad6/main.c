@@ -24,7 +24,7 @@ int pop(struct stack_node **top){
     int result = -1;
     if (NULL!=(*top))
     {
-        result = (*top)->data;
+        result=(*top)->data;
         struct stack_node *tmp = (*top)->next;
         free(*top);
         *top=tmp;
@@ -37,10 +37,10 @@ int peek(struct stack_node *top){
     {
         return top->data;
     }
-    printf("Stos jest pusty! \n");
+    printf("Stos jest pusty! ");
     return -1;
+    
 }
-
 
 int main(){
     struct stack_node *top = NULL;
